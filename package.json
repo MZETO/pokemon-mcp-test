@@ -1,0 +1,28 @@
+{
+  "name": "pokemon-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server for fetching Pokémon data from the Pokémon API",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/pokemon-server.js",
+    "dev": "ts-node-esm pokemon-server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "pokemon",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2"
+  }
+}
