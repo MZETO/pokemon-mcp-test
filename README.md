@@ -1,116 +1,65 @@
-# Pokémon MCP Server
+# 🎮 Pokémon MCP + React App
 
-This is a Model Context Protocol (MCP) server that provides tools for fetching Pokémon data from the [PokéAPI](https://pokeapi.co/).
+Un proyecto que demuestra cómo usar un **MCP (Model Context Protocol)** para construir una aplicación React completa. Este ejemplo incluye un servidor MCP de Pokémon que alimenta una Pokédex interactiva construida en React.
 
-## Features
+## 🎯 ¿Qué es este proyecto?
 
-The server provides the following tools:
+Este proyecto demuestra la **potencia de los MCP servers** para crear aplicaciones web completas:
 
-- **get-pokemon**: Fetch detailed information about a specific Pokémon by name or ID
-- **get-type**: Get information about a Pokémon type and its damage relations
-- **search-pokemon**: Search for Pokémon with pagination support
-- **get-move**: Get details about a specific Pokémon move
-- **get-ability**: Get information about a Pokémon ability
+- **Servidor MCP de Pokémon**: Proporciona acceso estructurado a datos de Pokémon
+- **Aplicación React Pokédex**: Interfaz moderna que consume el MCP server
+- **Desarrollo con IA**: Todo construido mediante un agente de IA (GitHub Copilot)
 
-## Installation
+## 🚀 ¿Cómo funciona?
 
+1. **MCP Server**: Servidor TypeScript que expone funciones para buscar Pokémon, habilidades, movimientos y tipos
+2. **React App**: Aplicación moderna con búsqueda en tiempo real, filtros y cartas interactivas
+3. **Integración**: El MCP server actúa como puente entre la aplicación y los datos de Pokémon
+
+## ✨ Características principales
+
+- � **Cartas interactivas** con efectos flip y zoom
+- 🔍 **Búsqueda inteligente** con filtros por tipo
+- 🌈 **UI dinámica** que cambia según el tipo seleccionado
+- 📱 **Totalmente responsive** para móvil y desktop
+- ⚡ **Datos en tiempo real** mediante PokéAPI
+
+## 🛠️ Instalación rápida
+
+### Aplicación React
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/pokemon-mcp-server.git
-cd pokemon-mcp-server
-
-# Install dependencies
+cd pokemon-cards-react
 npm install
-
-# Build the project
-npm run build
+npm run dev
 ```
 
-## Usage
-
-### Running the Server
-
+### Servidor MCP
 ```bash
+npm install
+npm run build
 npm start
 ```
 
-### Using with Claude for Desktop
+## 🤖 Construido por IA
 
-To use this server with Claude for Desktop, add it to your Claude for Desktop configuration file:
+**Este proyecto fue desarrollado completamente por un agente de IA** (GitHub Copilot) en colaboración con un usuario humano.
 
-For macOS:
-```json
-{
-  "mcpServers": {
-    "pokemon": {
-      "command": "node",
-      "args": ["/path/to/pokemon-mcp-server/build/pokemon-server.js"]
-    }
-  }
-}
-```
+### Proceso de desarrollo:
+- ⚡ **~500 líneas de código** generadas automáticamente
+- 🔄 **Iteraciones guiadas** con feedback del usuario
+- 🎯 **2 horas** de desarrollo colaborativo total
+- 🧠 **Demostración práctica** del potencial de la programación asistida por IA
 
-For Windows:
-```json
-{
-  "mcpServers": {
-    "pokemon": {
-      "command": "node",
-      "args": ["C:\\path\\to\\pokemon-mcp-server\\build\\pokemon-server.js"]
-    }
-  }
-}
-```
-
-### Testing with MCP Inspector
-
-You can test the server using the MCP Inspector:
-
-```bash
-npx @modelcontextprotocol/inspector node build/pokemon-server.js
-```
-
-## Example Tool Usage
-
-### Fetching a Pokémon
+## 📁 Estructura del proyecto
 
 ```
-Tool: get-pokemon
-Parameters: {"nameOrId": "pikachu"}
+├── pokemon-server.ts          # MCP Server (TypeScript)
+├── pokemon-cards-react/       # Aplicación React
+│   ├── src/components/        # Componentes React
+│   └── src/services/          # Servicios y API calls
+└── build/                     # Servidor compilado
 ```
 
-### Getting Type Information
+---
 
-```
-Tool: get-type
-Parameters: {"type": "electric"}
-```
-
-### Searching for Pokémon
-
-```
-Tool: search-pokemon
-Parameters: {"limit": 5, "offset": 0}
-```
-
-### Getting Move Information
-
-```
-Tool: get-move
-Parameters: {"nameOrId": "thunderbolt"}
-```
-
-### Getting Ability Information
-
-```
-Tool: get-ability
-Parameters: {"nameOrId": "static"}
-```
-
-## API Limitations
-
-This server uses the public PokéAPI, which has rate limiting. Please be respectful of the API's usage limits.
-
-## License
-
-MIT
+**💡 Este proyecto sirve como ejemplo de cómo los MCP servers pueden simplificar la creación de aplicaciones web modernas, especialmente cuando se combinan con el desarrollo asistido por IA.**
