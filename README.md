@@ -60,6 +60,12 @@ npm start
 └── build/                     # Servidor compilado
 ```
 
+## 📄 Créditos y Licencia
+
+Este proyecto es un fork y una adaptación de [pokemon-mcp-server](https://github.com/indroneelray/pokemon-mcp-server) de @indroneelray, utilizado bajo los términos de la Licencia MIT.
+
+El trabajo original está licenciado bajo la Licencia MIT. Copyright (c) 2023 Indroneel Ray.
+
 ---
 
 **💡 Este proyecto sirve como ejemplo de cómo los MCP servers pueden simplificar la creación de aplicaciones web modernas, especialmente cuando se combinan con el desarrollo asistido por IA.**
